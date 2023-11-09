@@ -1,0 +1,22 @@
+{
+	"extends": "./node_modules/gts/",
+	"rules": {
+		"prefer-const": [
+			"error",
+			{
+				"destructuring": "all"
+			}
+		],
+		"no-useless-escape": ["warn"],
+		"node/no-unpublished-import": ["warn"],
+		"@typescript-eslint/ban-ts-comment": ["warn"],
+		"@typescript-eslint/no-empty-interface": ["warn"]
+	},
+	"env": {
+		"browser": true
+	},
+	"parserOptions": {
+		"ecmaVersion": "latest",
+		"sourceType": "module"
+	}
+}

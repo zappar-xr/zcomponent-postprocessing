@@ -1,0 +1,43 @@
+import { BlendFunction } from 'postprocessing';
+
+export enum BlendFunctionNames {
+	SKIP = 'SKIP',
+	SET = 'SET',
+	ADD = 'ADD',
+	ALPHA = 'ALPHA',
+	AVERAGE = 'AVERAGE',
+	COLOR = 'COLOR',
+	COLOR_BURN = 'COLOR_BURN',
+	COLOR_DODGE = 'COLOR_DODGE',
+	DARKEN = 'DARKEN',
+	DIFFERENCE = 'DIFFERENCE',
+	DIVIDE = 'DIVIDE',
+	DST = 'DST',
+	EXCLUSION = 'EXCLUSION',
+	HARD_LIGHT = 'HARD_LIGHT',
+	HARD_MIX = 'HARD_MIX',
+	HUE = 'HUE',
+	INVERT = 'INVERT',
+	INVERT_RGB = 'INVERT_RGB',
+	LIGHTEN = 'LIGHTEN',
+	LINEAR_BURN = 'LINEAR_BURN',
+	LINEAR_DODGE = 'LINEAR_DODGE',
+	LINEAR_LIGHT = 'LINEAR_LIGHT',
+	LUMINOSITY = 'LUMINOSITY',
+	MULTIPLY = 'MULTIPLY',
+	NEGATION = 'NEGATION',
+	NORMAL = 'NORMAL',
+	OVERLAY = 'OVERLAY',
+	PIN_LIGHT = 'PIN_LIGHT',
+	REFLECT = 'REFLECT',
+	SATURATION = 'SATURATION',
+	SCREEN = 'SCREEN',
+	SOFT_LIGHT = 'SOFT_LIGHT',
+	SRC = 'SRC',
+	SUBTRACT = 'SUBTRACT',
+	VIVID_LIGHT = 'VIVID_LIGHT',
+}
+
+export function translateToBlendFunction(value: BlendFunctionNames): BlendFunction {
+	return BlendFunction[value as keyof typeof BlendFunction];
+}
